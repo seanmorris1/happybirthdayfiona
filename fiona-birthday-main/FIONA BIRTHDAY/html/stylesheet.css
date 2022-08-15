@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:40");
+/* line 3, ../../Desktop/FIONA BIRTHDAY/_sass/stylesheet.sass */
+body {
+  padding: 0 10%;
+  background-color: #111;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  line-height: 100vh;
+  white-space: nowrap;
+}
+
+/* line 12, ../../Desktop/FIONA BIRTHDAY/_sass/stylesheet.sass */
+.blinking-cursor {
+  user-select: none;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
