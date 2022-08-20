@@ -300,3 +300,17 @@ form.chat *{
   width:299px;
   height:530px;
   }
+
+  .metText{
+font-size: medium;
+inline-size: 530px; 
+margin: auto;
+padding: 10px;
+
+
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
