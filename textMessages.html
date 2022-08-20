@@ -4,13 +4,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="textMessages.css">
+    <script src="textMessages.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
+
 
 
 </head>
 <body>
-<!-- Çerçevemiz chat classına sahip bir form öğesi -->
 <div class="iphone">
     
     <div class="border">
@@ -73,8 +74,50 @@
     
   </div>
 
-<div>
-    <h1>hi</h1>
-</div>
+
+    <div id="typedtext" class="typedText"></div>
+
+    <script>
+// set up text to print, each item in array is new line
+var aText = new Array(
+    "Isn't it crazy how that one text turned into 3 weeks of non stop talking.", 
+    "Didn't we talk for 12+ hours a day. And that was just texting."
+    );
+    var iSpeed = 100; // time delay of print out
+    var iIndex = 0; // start printing array at this posision
+    var iArrLength = aText[0].length; // the length of the text array
+    var iScrollAt = 20; // start scrolling up at this many lines
+     
+    var iTextPos = 0; // initialise text position
+    var sContents = ''; // initialise contents variable
+    var iRow; // initialise current row
+     
+    function typewriter()
+    {
+     sContents =  ' ';
+     iRow = Math.max(0, iIndex-iScrollAt);
+     var destination = document.getElementById("typedtext");
+     
+     while ( iRow < iIndex ) {
+      sContents += aText[iRow++] + '<br />';
+     }
+     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+     if ( iTextPos++ == iArrLength ) {
+      iTextPos = 0;
+      iIndex++;
+      if ( iIndex != aText.length ) {
+       iArrLength = aText[iIndex].length;
+       setTimeout("typewriter()", 500);
+      }
+     } else {
+      setTimeout("typewriter()", iSpeed);
+     }
+    }
+    
+    
+    typewriter();
+
+    </script>
+
 </body>
 </html>
