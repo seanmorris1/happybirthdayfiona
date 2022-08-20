@@ -1,0 +1,140 @@
+.temp-container {
+    display: flex; /* establish flex container */
+    flex-direction: column; /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center; /* center items horizontally, in this case */
+    height: 300px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin:10px;
+  }
+  
+  #bell {
+    path {
+      fill: #000000;
+    }
+  }
+  
+  .point {
+    padding: 0;
+    background: #7f8bff;
+    width: 44px;
+    height: 44px;
+    -webkit-transition: opacity 0.5s ease-out, -webkit-transform 0.25s;
+    transition: opacity 0.5s ease-out, transform 0.25s;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    backface-visibility: hidden;
+    border-radius: 100%;
+  }
+  
+  .point {
+    overflow: visible;
+    cursor: pointer !important;
+    z-index: 2;
+    position: absolute;
+  }
+  
+  .point:hover{
+    transform: scale(1.1);
+  }
+  
+  .point:after,
+  .point:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    background: rgba(123, 137, 255, 0.5);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid rgba(123, 137, 255, 1);
+    -webkit-animation: preview-marker-pulsar 1.7s infinite ease-out;
+    animation: preview-marker-pulsar 1.7s infinite ease-out;
+    top: -38px;
+    left: -38px;
+    z-index: -1;
+  }
+  
+  .point:after {
+    width: 120px;
+    height: 120px;
+    top: -38px;
+    left: -38px;
+    -webkit-animation: preview-marker-pulsar-inner 1.7s infinite ease-out;
+    animation: preview-marker-pulsar-inner 1.7s infinite ease-out;
+  }
+  
+  @-webkit-keyframes preview-marker-pulsar {
+    0% {
+      opacity: 0.65;
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes preview-marker-pulsar {
+    0% {
+      opacity: 0.65;
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @-webkit-keyframes preview-marker-pulsar-inner {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    24%,
+    90% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.65;
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes preview-marker-pulsar-inner {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    24%,
+    90% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.65;
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
