@@ -5,7 +5,7 @@ var position = {x: 0, y: window.innerHeight/2};
 var counter = 0;
 var minFontSize = 15;
 var angleDistortion = 0;
-var letters = "Hi Fiona, that message is 423 days old. Can you believe that? That one simple message started all this. That's 423 amazing days I have gotten to spend with you. I hope you realize how powerful that one message actually was considering you finding it cringe. It ended up being the the best message that I have ever gotten and I am so happy to be with you. I love you! Oh, by the way, this isn't the end. Try clicking on the notifications.";
+var letters = "Hi Fiona, that message is 423 days old. Can you believe that? That one simple message which you seem to find super cringe started this long year relationship. I hope you realize how big of a deal that message is. It ended up being the most memorable message I have ever gotten and I am so happy to be with you. I love you! Oh, by the way, this isn't the end. Try clicking on the notifications.";
 
 // Drawing variables
 var canvas;
